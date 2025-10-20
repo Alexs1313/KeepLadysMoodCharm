@@ -12,6 +12,11 @@
 		6666E4349E6241605A7AB6AB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D154A2A32EA5305B000C4E61 /* relaxing-piano-383294.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D154A2A22EA5305B000C4E61 /* relaxing-piano-383294.mp3 */; };
+		D154A2A52EA5307A000C4E61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D154A2A42EA5307A000C4E61 /* AVFoundation.framework */; };
+		D154A2A72EA53088000C4E61 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D154A2A62EA53088000C4E61 /* AudioToolbox.framework */; };
+		D154A2A92EA5308E000C4E61 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D154A2A82EA5308E000C4E61 /* AVKit.framework */; };
+		EB99A4A9BA244D66A19DC7AC /* Moul-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87408AEF8D524B0B9AD58751 /* Moul-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-KeepLadysMoodCharm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KeepLadysMoodCharm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = KeepLadysMoodCharm/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KeepLadysMoodCharm/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87408AEF8D524B0B9AD58751 /* Moul-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Moul-Regular.ttf"; path = "../assets/fonts/Moul-Regular.ttf"; sourceTree = "<group>"; };
+		D154A2A22EA5305B000C4E61 /* relaxing-piano-383294.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "relaxing-piano-383294.mp3"; sourceTree = "<group>"; };
+		D154A2A42EA5307A000C4E61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D154A2A62EA53088000C4E61 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D154A2A82EA5308E000C4E61 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -32,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D154A2A92EA5308E000C4E61 /* AVKit.framework in Frameworks */,
+				D154A2A72EA53088000C4E61 /* AudioToolbox.framework in Frameworks */,
+				D154A2A52EA5307A000C4E61 /* AVFoundation.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-KeepLadysMoodCharm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,9 +64,21 @@
 			name = KeepLadysMoodCharm;
 			sourceTree = "<group>";
 		};
+		20A8D011734C4EE08FC6EC16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87408AEF8D524B0B9AD58751 /* Moul-Regular.ttf */,
+				D154A2A22EA5305B000C4E61 /* relaxing-piano-383294.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D154A2A82EA5308E000C4E61 /* AVKit.framework */,
+				D154A2A62EA53088000C4E61 /* AudioToolbox.framework */,
+				D154A2A42EA5307A000C4E61 /* AVFoundation.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-KeepLadysMoodCharm.a */,
 			);
@@ -75,6 +100,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				20A8D011734C4EE08FC6EC16 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -159,8 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				D154A2A32EA5305B000C4E61 /* relaxing-piano-383294.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				6666E4349E6241605A7AB6AB /* PrivacyInfo.xcprivacy in Resources */,
+				EB99A4A9BA244D66A19DC7AC /* Moul-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
