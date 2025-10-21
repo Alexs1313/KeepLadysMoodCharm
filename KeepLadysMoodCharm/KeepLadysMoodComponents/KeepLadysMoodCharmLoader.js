@@ -1,6 +1,6 @@
 import React from 'react';
 import { WebView } from 'react-native-webview';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, Platform } from 'react-native';
 import KeepLadysMoodCharmBack from './KeepLadysMoodCharmBack';
 
 const KeepLadysMoodCharmLoader = () => {
@@ -135,10 +135,17 @@ const KeepLadysMoodCharmLoader = () => {
   return (
     <KeepLadysMoodCharmBack>
       <View style={styles.loadercnt}>
-        <Image
-          source={require('../../assets/images/ladysmoodloader.png')}
-          style={{ bottom: 50 }}
-        />
+        {Platform.OS === 'ios' ? (
+          <Image
+            source={require('../../assets/images/ladysmoodloader.png')}
+            style={{ bottom: 50 }}
+          />
+        ) : (
+          <Image
+            source={require('../../assets/images/anrdlogo.png')}
+            style={{ bottom: 50, width: 300, height: 300, borderRadius: 80 }}
+          />
+        )}
       </View>
 
       <View style={styles.loaderwrap}>

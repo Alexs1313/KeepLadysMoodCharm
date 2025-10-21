@@ -47,7 +47,7 @@ const KeepLadysMoodAccount = () => {
   const handleNameChange = text => {
     setCharmName(text);
     saveCharmProfile(text, charmImage);
-    navigation.navigate('KeepLadysMoodHome');
+    navigation.replace('KeepLadysMoodHome');
   };
 
   const CharmPicker = () => {

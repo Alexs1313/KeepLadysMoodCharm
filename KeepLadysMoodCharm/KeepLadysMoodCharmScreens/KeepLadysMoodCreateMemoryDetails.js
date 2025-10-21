@@ -60,7 +60,9 @@ const KeepLadysMoodCreateMemoryDetails = ({ route }) => {
         >
           <Image source={require('../../assets/images/ladysmoodback.png')} />
         </TouchableOpacity>
-        <Text style={styles.charmtitle}>CREATE MEMORY</Text>
+        <View style={{ alignSelf: 'center', width: '70%' }}>
+          <Text style={styles.charmtitle}>CREATE MEMORY</Text>
+        </View>
 
         <Text style={styles.charmdatetxt}>{todayLadysCharmDate}</Text>
 
@@ -169,6 +171,7 @@ const KeepLadysMoodCreateMemoryDetails = ({ route }) => {
                         textTransform: 'uppercase',
                         bottom: Platform.OS === 'ios' ? 5 : 0,
                         right: Platform.OS === 'ios' ? 5 : 0,
+                        textAlign: 'center',
                       }}
                     >
                       DELETE MEMORY

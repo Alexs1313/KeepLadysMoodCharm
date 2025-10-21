@@ -21,7 +21,10 @@ const KeepLadysMoodAbout = () => {
   const shareCharmInfo = async () => {
     try {
       await Share.share({
-        message: `Keep Lady’s Mood Charm is your personal space of feminine harmony. Discover magical talismans every day, get inspiring tips and leave your memories. The application is created for real ladies who value peace, beauty and small moments that make up happiness`,
+        message:
+          Platform.OS === 'ios'
+            ? `Keep Lady’s Mood Charm is your personal space of feminine harmony. Discover magical talismans every day, get inspiring tips and leave your memories. The application is created for real ladies who value peace, beauty and small moments that make up happiness`
+            : `Luxury Lady’s Mood is your personal space of feminine harmony. Discover magical talismans every day, get inspiring tips and leave your memories. The application is created for real ladies who value peace, beauty and small moments that make up happiness`,
       });
     } catch (error) {
       Alert.alert(error.message);
@@ -38,20 +41,45 @@ const KeepLadysMoodAbout = () => {
         >
           <Image source={require('../../assets/images/ladysmoodback.png')} />
         </TouchableOpacity>
-        <Text style={styles.charmtitle}>ABOUT THE APP</Text>
+
+        <View style={{ alignSelf: 'center', width: '70%' }}>
+          <Text style={styles.charmtitle}>ABOUT THE APP</Text>
+        </View>
 
         <View style={styles.charmwlccontainer}>
-          <Text style={styles.charmpickertext}>
-            Keep Lady’s Mood Charm is your personal space of feminine harmony.
-            Discover magical talismans every day, get inspiring tips and leave
-            your memories. The application is created for real ladies who value
-            peace, beauty and small moments that make up happiness
-          </Text>
+          {Platform.OS === 'ios' ? (
+            <Text style={styles.charmpickertext}>
+              Keep Lady’s Mood Charm is your personal space of feminine harmony.
+              Discover magical talismans every day, get inspiring tips and leave
+              your memories. The application is created for real ladies who
+              value peace, beauty and small moments that make up happiness
+            </Text>
+          ) : (
+            <Text style={styles.charmpickertext}>
+              Luxury Lady’s Mood is your personal space of feminine harmony.
+              Discover magical talismans every day, get inspiring tips and leave
+              your memories. The application is created for real ladies who
+              value peace, beauty and small moments that make up happiness
+            </Text>
+          )}
 
-          <Image
-            source={require('../../assets/images/ladysmoodabout.png')}
-            style={{ top: 10, alignSelf: 'center' }}
-          />
+          {Platform.OS === 'ios' ? (
+            <Image
+              source={require('../../assets/images/ladysmoodabout.png')}
+              style={{ top: 10, alignSelf: 'center' }}
+            />
+          ) : (
+            <Image
+              source={require('../../assets/images/anrdlogo.png')}
+              style={{
+                width: 220,
+                height: 220,
+                borderRadius: 80,
+                alignSelf: 'center',
+                marginTop: 10,
+              }}
+            />
+          )}
         </View>
 
         <TouchableOpacity

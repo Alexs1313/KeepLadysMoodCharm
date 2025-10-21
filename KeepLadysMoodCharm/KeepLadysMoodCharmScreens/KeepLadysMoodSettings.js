@@ -136,12 +136,13 @@ const KeepLadysMoodSettings = () => {
                 >
                   <Text
                     style={{
-                      fontSize: 14,
+                      fontSize: 13,
                       color: '#fff',
                       fontFamily: 'Moul-Regular',
                       textTransform: 'uppercase',
                       bottom: Platform.OS === 'ios' ? 5 : 0,
                       right: Platform.OS === 'ios' ? 5 : 0,
+                      textAlign: 'center',
                     }}
                   >
                     DELETE ACCOUNT

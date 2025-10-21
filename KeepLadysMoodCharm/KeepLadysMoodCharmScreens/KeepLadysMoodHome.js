@@ -23,6 +23,7 @@ import {
 } from '../KeepLadysMoodCharmData/keepLadysCharmCategories';
 import Sound from 'react-native-sound';
 import Orientation from 'react-native-orientation-locker';
+import { BlurView } from '@react-native-community/blur';
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -286,7 +287,12 @@ const KeepLadysMoodHome = () => {
 
   return (
     <KeepLadysMoodCharmBack>
-      <View style={styles.charmcontainer}>
+      <View
+        style={[
+          styles.charmcontainer,
+          Platform.OS === 'android' && modalVisible && { filter: 'blur(4px)' },
+        ]}
+      >
         <View
           style={{
             flexDirection: 'row',
@@ -313,7 +319,9 @@ const KeepLadysMoodHome = () => {
               justifyContent: 'space-between',
             }}
           >
-            <Text style={styles.charmpickertext}>daily mood tip:</Text>
+            <Text style={[styles.charmpickertext, { width: '60%' }]}>
+              daily mood tip:
+            </Text>
             <View style={{ flexDirection: 'row', gap: 5 }}>
               <Image
                 source={require('../../assets/images/ladysmoodtimer.png')}
@@ -359,8 +367,8 @@ const KeepLadysMoodHome = () => {
               borderRadius: 10,
             }}
           >
-            <View style={styles.charmsecbtncnt}>
-              <Text style={styles.charmsecbtntext}>GALLERY OF MEMORIES</Text>
+            <View style={[styles.charmsecbtncnt]}>
+              <Text style={[styles.charmsecbtntext]}>GALLERY OF MEMORIES</Text>
             </View>
           </LinearGradient>
         </TouchableOpacity>
@@ -406,7 +414,9 @@ const KeepLadysMoodHome = () => {
 
       <Image
         source={require('../../assets/images/ladysmoodhmimg.png')}
-        style={{}}
+        style={
+          Platform.OS === 'android' && modalVisible && { filter: 'blur(4px)' }
+        }
       />
 
       <Modal
@@ -415,7 +425,27 @@ const KeepLadysMoodHome = () => {
         transparent={true}
         statusBarTranslucent={Platform.OS === 'android'}
       >
-        <View style={styles.modalOverlay}>
+        <View
+          style={[
+            styles.modalOverlay,
+            Platform.OS === 'android' && {
+              backgroundColor: 'rgba(0, 0, 0, 0.47)',
+            },
+          ]}
+        >
+          {Platform.OS === 'ios' && (
+            <BlurView
+              blurType="light"
+              blurAmount={2}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+              }}
+            />
+          )}
           <View style={styles.charmmodalcontainer}>
             {stage === 'select' && (
               <View>
@@ -427,6 +457,7 @@ const KeepLadysMoodHome = () => {
                     flexDirection: 'row',
                     justifyContent: 'space-around',
                     flexWrap: 'wrap',
+                    gap: 7,
                   }}
                 >
                   {CHARM_CATEGORIES.map(cat => (
@@ -604,14 +635,14 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   charmsecbtntext: {
-    fontSize: 14,
+    fontSize: 13,
     color: '#520426',
     fontFamily: 'Moul-Regular',
     textTransform: 'uppercase',
+    textAlign: 'center',
   },
   charmsecbtncnt: {
     alignItems: 'center',
-    flex: 1,
     paddingVertical: 15,
     paddingHorizontal: 8,
     justifyContent: 'center',
@@ -629,7 +660,6 @@ const styles = StyleSheet.create({
   },
   modalOverlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.6)',
     justifyContent: 'center',
     alignItems: 'center',
   },
