@@ -17,7 +17,7 @@ const App = () => {
     <NavigationContainer>
       <ContextProvider>
         {showCharmWelcomeScreen ? (
-          <Keepladysmoodstack />
+          <Keepladysmoodstac />
         ) : (
           <KeepLadysMoodCharmLoader />
         )}
