@@ -11,16 +11,16 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import KeepLadysMoodCharmBack from '../KeepLadysMoodComponents/KeepLadysMoodCharmBack';
+import KeepLadysMoodCharmBack from '../keepladysmoodcmp/KeepLadysMoodCharmBack';
 import LinearGradient from 'react-native-linear-gradient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
-import { useStore } from '../KeepLadysMoodCharmStore/keepLadysMoodCharmContext';
+import { useStore } from '../keepladysmoodst/keepLadysMoodCharmContext';
 const { height } = Dimensions.get('window');
 import {
   CHARM_CATEGORIES,
   CHARM_QUIZ_QUESTIONS,
-} from '../KeepLadysMoodCharmData/keepLadysCharmCategories';
+} from '../keepladysmooddt/keepLadysCharmCategories';
 import Sound from 'react-native-sound';
 import Orientation from 'react-native-orientation-locker';
 import { BlurView } from '@react-native-community/blur';

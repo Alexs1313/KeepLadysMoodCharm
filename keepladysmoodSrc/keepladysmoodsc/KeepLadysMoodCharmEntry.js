@@ -11,7 +11,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { useStore } from '../KeepLadysMoodCharmStore/keepLadysMoodCharmContext';
+import { useStore } from '../keepladysmoodst/keepLadysMoodCharmContext';
 
 const KeepLadysMoodCharmEntry = () => {
   const [currentWelcomeSlide, setCurrentWelcomeSlide] = useState(0);

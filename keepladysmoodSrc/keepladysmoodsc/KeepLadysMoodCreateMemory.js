@@ -1,4 +1,4 @@
-import KeepLadysMoodCharmBack from '../KeepLadysMoodComponents/KeepLadysMoodCharmBack';
+import KeepLadysMoodCharmBack from '../keepladysmoodcmp/KeepLadysMoodCharmBack';
 import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import {
@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useStore } from '../KeepLadysMoodCharmStore/keepLadysMoodCharmContext';
+import { useStore } from '../keepladysmoodst/keepLadysMoodCharmContext';
 import { useEffect, useState } from 'react';
 import { launchImageLibrary } from 'react-native-image-picker';
 

@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
-import KeepLadysMoodStack from './KeepLadysMoodCharm/KeepLadysMoodNavigation/KeepLadysMoodStack';
-import { ContextProvider } from './KeepLadysMoodCharm/KeepLadysMoodCharmStore/keepLadysMoodCharmContext';
-import KeepLadysMoodCharmLoader from './KeepLadysMoodCharm/KeepLadysMoodComponents/KeepLadysMoodCharmLoader';
+import Keepladysmoodstack from './keepladysmoodSrc/keepladysmoodnv/Keepladysmoodstack';
+import { ContextProvider } from './keepladysmoodSrc/keepladysmoodst/keepLadysMoodCharmContext';
+import KeepLadysMoodCharmLoader from './keepladysmoodSrc/keepladysmoodcmp/KeepLadysMoodCharmLoader';
 
 const App = () => {
   const [showCharmWelcomeScreen, setShowCharmWelcomeScreen] = useState(false);
@@ -17,7 +17,7 @@ const App = () => {
     <NavigationContainer>
       <ContextProvider>
         {showCharmWelcomeScreen ? (
-          <KeepLadysMoodStack />
+          <Keepladysmoodstack />
         ) : (
           <KeepLadysMoodCharmLoader />
         )}

@@ -7,13 +7,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import KeepLadysMoodCharmBack from '../KeepLadysMoodComponents/KeepLadysMoodCharmBack';
+import KeepLadysMoodCharmBack from '../keepladysmoodcmp/KeepLadysMoodCharmBack';
 import LinearGradient from 'react-native-linear-gradient';
 import { useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { TextInput } from 'react-native-gesture-handler';
 import { launchImageLibrary } from 'react-native-image-picker';
-import { useStore } from '../KeepLadysMoodCharmStore/keepLadysMoodCharmContext';
+import { useStore } from '../keepladysmoodst/keepLadysMoodCharmContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const { height } = Dimensions.get('window');

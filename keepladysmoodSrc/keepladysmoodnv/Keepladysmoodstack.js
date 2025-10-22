@@ -1,16 +1,16 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import KeepLadysMoodCharmEntry from '../KeepLadysMoodCharmScreens/KeepLadysMoodCharmEntry';
-import KeepLadysMoodHome from '../KeepLadysMoodCharmScreens/KeepLadysMoodHome';
-import KeepLadysMoodAccount from '../KeepLadysMoodCharmScreens/KeepLadysMoodAccount';
-import KeepLadysMoodAbout from '../KeepLadysMoodCharmScreens/KeepLadysMoodAbout';
-import KeepLadysMoodSettings from '../KeepLadysMoodCharmScreens/KeepLadysMoodSettings';
-import KeepLadysMoodCreateMemory from '../KeepLadysMoodCharmScreens/KeepLadysMoodCreateMemory';
-import KeepLadysMoodCharmMemoriesList from '../KeepLadysMoodCharmScreens/KeepLadysMoodCharmMemoriesList';
-import KeepLadysMoodCreateMemoryDetails from '../KeepLadysMoodCharmScreens/KeepLadysMoodCreateMemoryDetails';
+import KeepLadysMoodCharmEntry from '../keepladysmoodsc/KeepLadysMoodCharmEntry';
+import KeepLadysMoodHome from '../keepladysmoodsc/KeepLadysMoodHome';
+import KeepLadysMoodAccount from '../keepladysmoodsc/KeepLadysMoodAccount';
+import KeepLadysMoodAbout from '../keepladysmoodsc/KeepLadysMoodAbout';
+import KeepLadysMoodSettings from '../keepladysmoodsc/KeepLadysMoodSettings';
+import KeepLadysMoodCreateMemory from '../keepladysmoodsc/KeepLadysMoodCreateMemory';
+import KeepLadysMoodCharmMemoriesList from '../keepladysmoodsc/KeepLadysMoodCharmMemoriesList';
+import KeepLadysMoodCreateMemoryDetails from '../keepladysmoodsc/KeepLadysMoodCreateMemoryDetails';
 
 const Stack = createStackNavigator();
 
-const KeepLadysMoodStack = () => {
+const Keepladysmoodstack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen
@@ -43,4 +43,4 @@ const KeepLadysMoodStack = () => {
   );
 };
 
-export default KeepLadysMoodStack;
+export default Keepladysmoodstack;
